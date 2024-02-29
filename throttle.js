@@ -1,7 +1,7 @@
 const input = document.querySelector(".input");
 const paragraph = document.querySelector(".paragraph");
 
-// debounce code
+// throttle code
 function throttle(callback, delay) {
     var wait = false;
 
@@ -9,9 +9,7 @@ function throttle(callback, delay) {
         if (wait) return;
 
         callback(e);
-
         wait = true;
-
         setTimeout(() => {
             wait = false;
         }, delay);
